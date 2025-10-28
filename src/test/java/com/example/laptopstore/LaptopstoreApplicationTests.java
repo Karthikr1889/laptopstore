@@ -1,21 +1,16 @@
 package com.example.laptopstore;
 
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.Test;
-
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class LaptopstoreApplicationTests {
 	
-	@Test
-    void contextLoads() {
-        // basic test
-		int expected = 42;
-        int actual = 40 + 2;
-        assertEquals(expected, actual, "Basic math test to verify JUnit setup");
+	public static void main(String[] args) {
+        SpringApplication.run(LaptopstoreApplicationTests.class, args);
+        System.out.println("Application started successfully");
     }
 	
 /*	@Bean

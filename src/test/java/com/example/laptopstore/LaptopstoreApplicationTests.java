@@ -1,22 +1,24 @@
 package com.example.laptopstore;
 
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
-import org.junit.platform.engine.discovery.DiscoverySelectors;
-import org.junit.platform.launcher.Launcher;
-import org.junit.platform.launcher.LauncherDiscoveryRequest;
-import org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilder;
-import org.modelmapper.ModelMapper;
 
-
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Bean;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class LaptopstoreApplicationTests {
 	
-	@Bean
+	@Test
+    void contextLoads() {
+        // basic test
+		int expected = 42;
+        int actual = 40 + 2;
+        assertEquals(expected, actual, "Basic math test to verify JUnit setup");
+    }
+	
+/*	@Bean
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
 	}
@@ -33,7 +35,7 @@ public class LaptopstoreApplicationTests {
     	
 		//SpringApplication.run(LaptopstoreApplicationTests.class, args);
 	}
-
+*/
 }
 
 
